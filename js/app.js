@@ -3,6 +3,17 @@
 console.log('Winner!!');
 const ctx = document.getElementById('myChart');
 
+ // What does localStorage store => JSON
+
+ //localStorage.setItem('Storage', JSON.stringify(ducks)); // method of the localStorage object, 
+ //takes 2 arguments a key, and a value, 
+ //function Storage() {
+ //   return JSON.parse(localStorage.getItem('Storage'));
+ // }
+  
+
+
+
 new Chart(ctx, {
   type: 'bar',
   data: {
@@ -154,6 +165,10 @@ function renderNewDucks() {
 
 }
 
-
+localStorage.setItem('Storage', JSON.stringify(ducks)); // method of the localStorage object, 
+ //takes 2 arguments a key, and a value, 
+ function Storage() {
+    return JSON.parse(localStorage.getItem('Storage'));
+  }
 
 
